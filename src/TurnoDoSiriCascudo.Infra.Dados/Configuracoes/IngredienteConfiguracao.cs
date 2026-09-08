@@ -10,8 +10,11 @@ namespace TurnoDoSiriCascudo.Infra.Dados.Configuracoes
         {
             builder.HasKey(i => i.Id);
 
-            builder.Property(i => i.UsuarioCriadorId)
-                .IsRequired();
+            builder.HasOne(i => i.UsuarioCriador)
+                .WithMany(i => i.IngredientesCadastrados)
+                .HasForeignKey(i => i.UsuarioCriadorId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Property(i => i.UsuarioAtualizadorId)
                 .IsRequired(false);

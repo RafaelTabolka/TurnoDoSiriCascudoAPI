@@ -15,7 +15,7 @@ namespace TurnoDoSiriCascudo.Infra.Dados.Configuracoes
                 .HasMaxLength(100);
 
             builder.Property(c => c.DataUltimoPedido)
-                .IsRequired();
+                .IsRequired(false);
 
             builder.Property(c => c.Telefone)
                 .IsRequired()

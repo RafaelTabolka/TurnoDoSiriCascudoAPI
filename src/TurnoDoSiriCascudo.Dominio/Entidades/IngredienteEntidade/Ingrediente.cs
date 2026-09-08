@@ -10,7 +10,6 @@ namespace TurnoDoSiriCascudo.Dominio.Entidades.IngredienteEntidade
         public Guid UsuarioCriadorId { get; private set; }
         public Usuario UsuarioCriador { get; private set; } = null!;
         public Guid? UsuarioAtualizadorId { get; private set; }
-        public Usuario? UsuarioAtualizador { get; private set; }
         public int QuantidadeEstoque { get; private set; }
         public List<IngredienteProduto> IngredientesProdutos { get; private set; } = null!;
     }

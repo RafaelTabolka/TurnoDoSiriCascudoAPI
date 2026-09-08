@@ -12,9 +12,23 @@ namespace TurnoDoSiriCascudo.Dominio.Entidades.UsuarioEntidade
         public string NomeUsuario { get; private set; } = string.Empty;
         public string Senha { get; private set; } = string.Empty;
         public EnumStatusUsuario StatusUsuario { get; private set; }
+        public EnumPapelUsuario PapelUsuario { get; private set; }
         public List<Pedido> PedidosCadastrados { get; private set; } = new();
         public List<Produto> ProdutosCadastrados { get; private set; } = new();
         public List<Ingrediente> IngredientesCadastrados { get; private set; } = new();
         public List<Cliente> ClientesCadastrados { get; private set; } = new();
+
+        public Usuario(string nomeUsuario)
+        {
+            Id = Guid.NewGuid();
+            NomeUsuario = nomeUsuario;
+            StatusUsuario = EnumStatusUsuario.Ativo;
+            PapelUsuario = EnumPapelUsuario.Comum;
+        }
+
+        public void DefineSenhaHash(string senhaHash)
+        {
+            Senha = senhaHash;
+        }
     }
 }
