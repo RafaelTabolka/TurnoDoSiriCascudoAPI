@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/1 - WebApi/">
+    <Project Path="src/TurnoDoSiriCascudo.WebApi/TurnoDoSiriCascudo.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/2 - Dominio/">
+    <Project Path="src/TurnoDoSiriCascudo.Dominio/TurnoDoSiriCascudo.Dominio.csproj" />
+  </Folder>
+  <Folder Name="/3 - Infra/" />
+  <Folder Name="/3 - Infra/3.1 - Dados/">
+    <Project Path="src/TurnoDoSiriCascudo.Infra.Dados/TurnoDoSiriCascudo.Infra.Dados.csproj" />
+  </Folder>
+  <Folder Name="/3 - Infra/3.2 - CrossCutting/">
+    <Project Path="src/TurnoDoSiriCascudo.Infra.CrossCutting.Extensoes/TurnoDoSiriCascudo.Infra.CrossCutting.Extensoes.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Comandos\ClienteComandos\" />
+    <Folder Include="Comandos\IngredienteComandos\" />
+    <Folder Include="Comandos\IngredienteProdutoComandos\" />
+    <Folder Include="Comandos\UsuarioComandos\" />
+    <Folder Include="Comandos\ProdutoPedidoComandos\" />
+    <Folder Include="Comandos\ProdutoComandos\" />
+    <Folder Include="Comandos\PedidoComandos\" />
+  </ItemGroup>
+
+</Project>
