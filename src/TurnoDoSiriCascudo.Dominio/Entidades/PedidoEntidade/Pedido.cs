@@ -16,7 +16,6 @@ namespace TurnoDoSiriCascudo.Dominio.Entidades.PedidoEntidade
         public Guid UsuarioCriadorId { get; private set; }
         public Usuario UsuarioCriador { get; private set; } = null!;
         public Guid? UsuarioAtualizadorId { get; private set; }
-        public Usuario? UsuarioAtualizador { get; private set; }
         public List<ProdutoPedido> ProdutosPedidos { get; private set; } = new();
     }
 }

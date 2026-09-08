@@ -21,9 +21,12 @@ namespace TurnoDoSiriCascudo.Infra.Dados.Configuracoes
                 .IsRequired(false)
                 .HasMaxLength(300);
 
-            builder.Property(p => p.UsuarioCriadorId)
-                .IsRequired();
-
+            builder.HasOne(p => p.UsuarioCriador)
+                .WithMany(p => p.PedidosCadastrados)
+                .HasForeignKey(p => p.UsuarioCriadorId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
+            
             builder.Property(p => p.UsuarioAtualizadorId)
                 .IsRequired(false);
 
