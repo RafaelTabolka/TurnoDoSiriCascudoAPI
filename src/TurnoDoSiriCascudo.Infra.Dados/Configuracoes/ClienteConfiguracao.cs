@@ -21,7 +21,7 @@ namespace TurnoDoSiriCascudo.Infra.Dados.Configuracoes
                 .IsRequired()
                 .HasMaxLength(11);
 
-            builder.Property(c => c.QuantidadePedido)
+            builder.Property(c => c.QuantidadePedidosFeitos)
                 .IsRequired();
 
             builder.Property(c => c.Observacoes)
