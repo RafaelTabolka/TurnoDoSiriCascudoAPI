@@ -9,7 +9,7 @@ namespace TurnoDoSiriCascudo.Dominio.Entidades.ClienteEntidade
         public string NomeCliente { get; private set; } = string.Empty;
         public DateTime? DataUltimoPedido { get; private set; }
         public string Telefone { get; private set; } = string.Empty;
-        public int QuantidadePedido { get; private set; }
+        public int QuantidadePedidosFeitos { get; private set; }
         public string? Observacoes { get; private set; } = string.Empty;
         public Guid UsuarioCriadorId { get; private set; }
         public Usuario UsuarioCriador { get; private set; } = null!;
