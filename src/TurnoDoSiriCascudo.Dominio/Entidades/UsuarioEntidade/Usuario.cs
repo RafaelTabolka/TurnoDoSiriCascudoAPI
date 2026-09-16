@@ -26,9 +26,29 @@ namespace TurnoDoSiriCascudo.Dominio.Entidades.UsuarioEntidade
             PapelUsuario = EnumPapelUsuario.Comum;
         }
 
+        public void Atualizar(string nomeUsuario)
+        {
+            NomeUsuario = nomeUsuario;
+        }
+
         public void DefineSenhaHash(string senhaHash)
         {
             Senha = senhaHash;
+        }
+
+        public void Ativar()
+        {
+            StatusUsuario = EnumStatusUsuario.Ativo;
+        }
+
+        public void Desativar()
+        {
+            StatusUsuario = EnumStatusUsuario.Inativo;
+        }
+
+        public void TornarAdmin()
+        {
+            PapelUsuario = EnumPapelUsuario.Administrador;
         }
     }
 }
