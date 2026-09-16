@@ -1,8 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Ativar;
+using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Atualizar;
 using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Criar;
+using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Desativar;
 using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Listar;
 using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.Obter;
+using TurnoDoSiriCascudo.Dominio.Comandos.UsuarioComandos.PapelAdmin;
 
 namespace TurnoDoSiriCascudo.WebApi.Controllers.UsuarioControllers
 {
@@ -34,6 +38,41 @@ namespace TurnoDoSiriCascudo.WebApi.Controllers.UsuarioControllers
             var response = await mediator.Send(request);
 
             return Created("Criado", response);
+        }
+
+        [HttpPut("atualizar")]
+        public async Task<IActionResult> AtualizarUsuario(UsuarioAtualizarRequest request)
+        {
+            var response = await mediator.Send(request);
+
+            return Ok(response);
+        }
+
+        [HttpPatch("ativar/{id}")]
+        public async Task<IActionResult> AtivarUsuario(Guid id)
+        {
+            var request = new UsuarioAtivarRequest(id);
+            var response = await mediator.Send(request);
+
+            return Ok(response);
+        }
+
+        [HttpPatch("desativar/{id}")]
+        public async Task<IActionResult> DesativarUsuario(Guid id)
+        {
+            var request = new UsuarioDesativarRequest(id);
+            var response = await mediator.Send(request);
+
+            return Ok(response);
+        }
+
+        [HttpPatch("tornarAdmin/{id}")]
+        public async Task<IActionResult> TornarUsuarioAdmin(Guid id)
+        {
+            var request = new UsuarioPapelAdminRequest(id);
+            var response = await mediator.Send(request);
+
+            return Ok(response);
         }
     }
 }
